@@ -1,15 +1,14 @@
 import React from 'react';
-import './App.css';
+import Header from '../Header/Header';
+import Div from './styled';
+import TimeDisplay from '../TimeDisplay/TimeDisplay';
 
 function App() {
-  const hello = (txt: string): string => txt;
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <p> {hello('Hello World Luiz')} </p>
-      </header>
-    </div>
+    <Div>
+      <Header />
+      <TimeDisplay />
+    </Div>
   );
 }
 

@@ -26,5 +26,6 @@ module.exports = {
     ],
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
+    'jsx-a11y/media-has-caption': 'off',
   },
 };

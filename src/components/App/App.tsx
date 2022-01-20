@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Div from './styled';
-import TimeDisplay from '../TimeDisplay/TimeDisplay';
+import Tabs from '../Tabs/Tabs';
 
 function App() {
   return (
     <Div>
       <Header />
-      <TimeDisplay />
+      <Tabs />
     </Div>
   );
 }

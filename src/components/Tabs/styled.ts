@@ -14,6 +14,7 @@ const Button: StyledComponent<'button', any | never> = styled.button`
   opacity: 1;
   margin-right: 10px;
   font-weight: bold;
+  font-family: inherit;
 
   &:hover {
     background: none rgba(0, 0, 0, 0.15);

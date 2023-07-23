@@ -1,44 +1,21 @@
 import React, { useState } from 'react';
 import Button, { ButtonContainer } from './styled';
 import TimeDisplay from '../TimeDisplay/TimeDisplay';
-import getRandomArbitrary, { randomNumber } from '../../utils/RandomArbitrary';
+import getTime from '../../utils/getTime';
+import { POMODORO_BREAK, LONG_BREAK, SHORT_BREAK } from '../../constants';
 
 function Tabs() {
-  const [whichTabWillBeOpen, setWhichTabWillBeOpen] =
-    useState<string>('pomodoro');
-  const timesToStart = [1500, 600, 300];
-  const keyValue = getRandomArbitrary(0, 100000) + randomNumber();
-
-  function chooseTimeToStart(): JSX.Element {
-    if (whichTabWillBeOpen === 'pomodoro') {
-      return <TimeDisplay key={keyValue} timeToStart={timesToStart[0]} />;
-    }
-
-    if (whichTabWillBeOpen === 'long-break') {
-      return <TimeDisplay key={keyValue} timeToStart={timesToStart[1]} />;
-    }
-
-    if (whichTabWillBeOpen === 'short-break') {
-      return <TimeDisplay key={keyValue} timeToStart={timesToStart[2]} />;
-    }
-
-    return <TimeDisplay key={keyValue} timeToStart={timesToStart[0]} />;
-  }
+  const [tab, setTab] = useState<string>(POMODORO_BREAK);
+  const time = getTime(tab);
 
   return (
     <>
       <ButtonContainer>
-        <Button onClick={() => setWhichTabWillBeOpen('pomodoro')}>
-          Pomodoro
-        </Button>
-        <Button onClick={() => setWhichTabWillBeOpen('long-break')}>
-          Long break
-        </Button>
-        <Button onClick={() => setWhichTabWillBeOpen('short-break')}>
-          Short Break
-        </Button>
+        <Button onClick={() => setTab(POMODORO_BREAK)}>Pomodoro</Button>
+        <Button onClick={() => setTab(LONG_BREAK)}>Long break</Button>
+        <Button onClick={() => setTab(SHORT_BREAK)}>Short Break</Button>
       </ButtonContainer>
-      {chooseTimeToStart()}
+      <TimeDisplay key={tab} timeToStart={time} />
     </>
   );
 }

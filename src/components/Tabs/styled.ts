@@ -1,6 +1,6 @@
-import styled, { StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 
-const Button: StyledComponent<'button', any | never> = styled.button`
+const Button = styled.button`
   border: none;
   margin: 0px;
   border-radius: 4px;
@@ -25,7 +25,7 @@ const Button: StyledComponent<'button', any | never> = styled.button`
   }
 `;
 
-export const ButtonContainer: StyledComponent<'div', any | never> = styled.div`
+export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

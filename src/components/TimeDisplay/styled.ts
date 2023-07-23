@@ -1,13 +1,13 @@
-import styled, { StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 
-const Main: StyledComponent<'main', any | never> = styled.main`
+const Main = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2em;
 `;
 
-const Container: StyledComponent<'div', any | never> = styled.div`
+const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@ const Container: StyledComponent<'div', any | never> = styled.div`
   margin-top: 30px;
 `;
 
-const ButtonsWrapper: StyledComponent<'div', any | never> = styled.div`
+const ButtonsWrapper = styled.div`
   display: flex;
 
   @media (max-width: 640px) {
@@ -23,7 +23,7 @@ const ButtonsWrapper: StyledComponent<'div', any | never> = styled.div`
   }
 `;
 
-const Button: StyledComponent<'button', any | never> = styled.button`
+const Button = styled.button`
   cursor: pointer;
   border: none;
   margin: 20px 10px 0px;

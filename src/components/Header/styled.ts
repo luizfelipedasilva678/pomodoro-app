@@ -1,6 +1,6 @@
-import styled, { StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 
-const HeaderContainer: StyledComponent<'header', any | never> = styled.header`
+const HeaderContainer = styled.header`
   padding: 20px;
   display: flex;
   font-size: 3em;

@@ -1,6 +1,6 @@
-import styled, { StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 
-const Div: StyledComponent<'div', any | never> = styled.div`
+const Div = styled.div`
   background-color: #5a58e9;
   color: #fff;
   margin: 0;
